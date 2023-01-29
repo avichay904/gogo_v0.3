@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using DAL;
 
 namespace BLL
 {
@@ -25,5 +26,21 @@ namespace BLL
             U_name = u_name;
             U_phone = u_phone;
         }
+
+
+        public B_User CheckLogin(B_User user) 
+        {
+           
+           return D_User.CheckLoginDal(user);
+
+        }
+
+
+
+
+
+
+
     }
+
 }

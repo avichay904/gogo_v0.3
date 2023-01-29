@@ -6,7 +6,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 
-namespace gogo_v0._3.App_Code
+  
+namespace gogo_v0._3
 {
     public class Services
     {
@@ -20,7 +21,7 @@ namespace gogo_v0._3.App_Code
             // הפוקציה מקבלת מחרוזת ומחזירה טוקן ארוך של מחרוזת מוצפנת באופן אסימטרי
             // משמשת אותנו בעיקר עבור הצפנת סיסמת המשתמש בבסיס הנתונים
             // כך שאם יפרצו לבסיס הנתונים, לא יוכלו לדעת מה הסיסמה
-            public static string ComputeSha256Hash(string rawData)
+            public static string Hash(string rawData)
             {
                 // Create a SHA256  
                 using (SHA256 sha256Hash = SHA256.Create())
