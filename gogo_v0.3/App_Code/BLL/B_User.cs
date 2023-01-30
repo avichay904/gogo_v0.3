@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 using DAL;
 
 namespace BLL
@@ -34,6 +36,68 @@ namespace BLL
            return D_User.CheckLoginDal(user);
 
         }
+
+
+
+        public static bool Check_Register(B_User person)
+        {
+            string Phon = person.U_phone;
+            string Email = person.U_email.ToLower();
+            string Pass = person.U_psss;
+            // בדיקות תקינות מייל
+            if (!(Email.Contains('@')))
+                return false;
+
+           
+            // בדיקת תקינות סיסמה
+
+
+
+            int i = 0, j = 0, k = 0;
+
+
+            for (i = 0; i < Pass.Length - 1; i++)
+            {
+
+                // בדיקת אות גדולה
+                if (Pass[i] > 'A' && Pass[i] < 'Z')
+                    j++;
+
+
+                // בדיקת סימן מיוחד
+                if (Pass[i] > '!' && Pass[i] < 'A')
+                    k++;
+
+
+            }
+
+            if (i < 8 || j == 0 || k == 0)
+                return false;
+
+
+
+            // בדיקת מספר טלפון
+
+            if (Phon.Length > 8)
+                return false;
+
+
+
+            return true;
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
 
 
 

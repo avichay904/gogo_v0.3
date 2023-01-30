@@ -47,6 +47,34 @@ namespace DAL
 
         }
 
+
+
+        public static bool checkRgister(B_User Tmp)
+        {
+
+
+            DBcontext Db= new DBcontext();
+
+
+            string Sql = $"SELECT * FROM T_Users WHERE U_email='{Tmp.U_email}'";
+            
+            DataTable Dt = Db.Excute(Sql);
+
+            if (Dt.Rows.Count > 0)
+            {
+
+                Db.Close();
+                return false;
+
+            }
+            Db.Close();
+
+
+
+             return true;
+
+        }
+
     }
     
 }

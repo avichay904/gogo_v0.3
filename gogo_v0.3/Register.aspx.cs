@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using BLL;
 namespace gogo_v0._3
 {
     public partial class Register : System.Web.UI.Page
@@ -13,5 +13,35 @@ namespace gogo_v0._3
         {
 
         }
-    }
+
+
+        protected void Btn_Register_Click(object sender, EventArgs e)
+        {
+
+            B_User Tmp = new B_User()
+            {
+
+                U_name = Name.Value, U_email = Email.Value
+            };
+               
+
+
+
+               
+
+
+
+
+
+         }
+
+
+
+
+
+        }
+
+
+
+
 }
