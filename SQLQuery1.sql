@@ -1,0 +1,1 @@
+﻿INSERT INTO T_Users (U_email,U_name,U_pass,U_phone,U_title) VALUES('D','F','GG','H',1)

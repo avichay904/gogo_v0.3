@@ -28,7 +28,7 @@
             <div class="row justify-content-center">
               <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">הרשמה</p>
 
                 <form class="mx-1 mx-md-4">
 
@@ -43,7 +43,7 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="email"  id="Email" class="form-control" runat="server"  />
+                      <input type="email" aria-autocomplete="both" autocomplete="on"  id="Email" class="form-control" runat="server"  />
                       <label class="form-label" for="form3Example3c">מייל</label>
                     </div>
                   </div>    
@@ -51,7 +51,7 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="password" id="form3Example4c" class="form-control" runat="server" />
+                      <input type="password" aria-autocomplete="both" id="Pass" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" runat="server" />
                       <label class="form-label" for="form3Example4c">סיסמה</label>
                     </div>
                   </div>
@@ -59,20 +59,29 @@
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="password" id="form3Example4cd"  class="form-control"  runat="server"/>
+                      <input type="password" id="Pass2"  class="form-control"  runat="server"/>
                       <label class="form-label" for="form3Example4cd">חזור על הסיסמה</label>
                     </div>
                   </div>
 
+
+                    <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text"  id="phone" autocomplete="on" aria-autocomplete="list" class="form-control" runat="server"  />
+                      <label class="form-label" for="form3Example3c">טלפון</label>
+                    </div>
+                  </div>    
+
                   <div class="form-check d-flex justify-content-center mb-5">
                     <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" runat="server" />
                     <label class="form-check-label" for="form2Example3">
-                      I agree all statements in <a href="#!">Terms of service</a>
+                      <a href="#!">אני מאשר את המדיניות</a>
                     </label>
                   </div>
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="button" class="btn btn-primary btn-lg">הרשמה</button>
+                    
                  <asp:Button ID="Btn_Register" Text="הרשמה" runat="server" CssClass="btn btn-primary btn-lg" OnClick="Btn_Register_Click" />
 
                   </div>

@@ -18,12 +18,21 @@ namespace gogo_v0._3
         protected void Btn_Register_Click(object sender, EventArgs e)
         {
 
+
+
             B_User Tmp = new B_User()
             {
 
-                U_name = Name.Value, U_email = Email.Value
+                U_name = Name.Value,
+                U_email = Email.Value,
+                U_phone= phone.Value
+                
             };
-               
+            if (Tmp.Check_Register(Tmp))
+            {
+
+                Response.Redirect("/admin/Home.aspx");
+            }
 
 
 

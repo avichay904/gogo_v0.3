@@ -67,11 +67,17 @@ namespace DAL
                 return false;
 
             }
+            string sql2 = $"INSERT INTO T_Users (U_email,U_name,U_pass,U_phone) VALUES('{Tmp.U_email}','{Tmp.U_name}','{Tmp.U_psss}','{Tmp.U_phone}')";
+
+
+             int num=Db.ExcuteNonQury(sql2);
             Db.Close();
 
 
+          
 
-             return true;
+
+            return true;
 
         }
 
