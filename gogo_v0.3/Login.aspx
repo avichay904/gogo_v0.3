@@ -61,8 +61,8 @@
                                 </div>
                                 <div class="col-xs-6 text-xs-right">
                                     <button type="button" class="btn btn-link p-x-0">שכחתי את הסיסמה
-
-                                    </button>
+                                        <asp:Button CssClass="btn btn-link p-x-0" Text="שכחתי את הסיסמה" ID="Forgot" OnClick="Forgot_Click" />
+                                    
                                 </div>
                             </div>
                         </div>

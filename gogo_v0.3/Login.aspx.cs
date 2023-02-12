@@ -8,6 +8,7 @@ using BLL;
 
 
 
+
 namespace gogo_v0._3
 {
     public partial class WebForm1 : System.Web.UI.Page
@@ -45,11 +46,12 @@ namespace gogo_v0._3
 
         }
 
+        protected void Forgot_Click(object sender, EventArgs e)
+        {
+            
 
 
-
-
-
+        }
     }
     
     

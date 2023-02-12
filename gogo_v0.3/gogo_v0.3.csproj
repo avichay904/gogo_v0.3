@@ -44,6 +44,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.Bson.1.0.2\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -365,9 +371,11 @@
     <Content Include="admin\sb\js\sb-admin-2.js" />
     <Content Include="admin\sb\panels-wells.html" />
     <Content Include="admin\Shipments.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Register.aspx" />
     <Content Include="Web.config" />
     <Content Include="Login.aspx" />
+    <Content Include="WebForm2.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="admin\admin.Master.cs">
@@ -392,7 +400,14 @@
       <DependentUpon>Shipments.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\DAL\DBcontext.cs" />
+    <Compile Include="App_Code\DAL\D_Sheipments.cs" />
     <Compile Include="App_Code\DAL\D_User.cs" />
+    <Compile Include="App_Code\Handler1.ashx.cs">
+      <DependentUpon>Handler1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="App_Code\Services.cs" />
     <Compile Include="App_Code\BLL\B_Shipment.cs" />
     <Compile Include="App_Code\BLL\B_Driver.cs" />
@@ -412,6 +427,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -586,6 +608,7 @@
     <Content Include="admin\sb\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="admin\sb\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="admin\sb\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="App_Code\Handler1.ashx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

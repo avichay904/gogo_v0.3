@@ -16,7 +16,7 @@
     <form id="form1" runat="server">
         <div>
 
-
+            
 
 
   <section class="container-fluid" style="background-color: #eee;">
@@ -78,6 +78,8 @@
                     <label class="form-check-label" for="form2Example3">
                       <a href="#!">אני מאשר את המדיניות</a>
                     </label>
+                     
+
                   </div>
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
@@ -106,7 +108,7 @@
   </div>
 </section>
 
-
+               
 
             
         </div>
