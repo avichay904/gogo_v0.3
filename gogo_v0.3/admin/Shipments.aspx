@@ -15,6 +15,8 @@
                                 <i class="fa fa-align-justify"></i> Combined All Table
                             </div>
                             <div class="card-block">
+
+                                <a href="Handler1.ashx">יצאה לאקסל</a>
                                 <table class="table table-bordered table-striped table-condensed">
                                     <thead>
                                         <tr>
@@ -41,7 +43,8 @@
                                                 <td><%#Eval("S_id") %></td>
                                             <td><%#Eval("S_city") %></td>
                                             <td><%#Eval("S_dataStart") %></td>
-                                            
+
+                                                                                       
                                                 <span class="tag tag-danger">Banned</span>
                                             </td>
                                         </tr>

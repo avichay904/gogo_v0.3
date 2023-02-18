@@ -14,7 +14,7 @@ namespace gogo_v0._3.admin
         protected void Page_Load(object sender, EventArgs e)
         {
             Rpt.DataSource = B_Shipment.GetAll();
-            Rpt.DataBind();
+            Rpt.DataBind(); 
             
 
         }

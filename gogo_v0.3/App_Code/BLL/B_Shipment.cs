@@ -21,7 +21,7 @@ namespace BLL
         public int S_sumBox { get; set; }
         public int S_toDo { get; set; }
         public string S_picName { get; set; }
-        public string S_dataDO { get; set; }
+        public string S_dataDo { get; set; }
         public string S_msg { get; set;}
 
        

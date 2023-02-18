@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +17,9 @@ namespace BLL
         public string C_nHome{ get; set;}
 
         
-
+        public static List<B_Customer> GetAll()
+        {
+            return D_Customer.GetAll();
+        }
     }
 }

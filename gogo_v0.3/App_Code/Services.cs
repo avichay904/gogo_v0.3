@@ -66,8 +66,11 @@ namespace gogo_v0._3
                     client.EnableSsl = true;
                     // Port 465 for SSL communication
                     client.Port = 587;
-                    // Provide authentication information with Gmail SMTP server to authenticate your sender account
-                    client.Credentials = new System.Net.NetworkCredential("", "");
+                // Provide authentication information with Gmail SMTP server to authenticate your sender account
+
+                client.Credentials = new System.Net.NetworkCredential("", "");
+                    client.Credentials = new System.Net.NetworkCredential("", "incynvqisezl");
+
 
                     client.Send(newMail);
                     return true;

@@ -79,7 +79,9 @@
     <Content Include="admin\css\simple-line-icons.min.css" />
     <Content Include="admin\css\style.css" />
     <Content Include="admin\css\style.min.css" />
+    <Content Include="admin\Custommers.aspx" />
     <Content Include="admin\dest\style.css" />
+    <Content Include="admin\Drivers.aspx" />
     <Content Include="admin\fonts\fontawesome-webfont.svg" />
     <Content Include="admin\fonts\Simple-Line-Icons.svg" />
     <Content Include="admin\gruntfiles\Gruntfile.js" />
@@ -384,6 +386,20 @@
     <Compile Include="admin\admin.Master.designer.cs">
       <DependentUpon>admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="admin\Custommers.aspx.cs">
+      <DependentUpon>Custommers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Custommers.aspx.designer.cs">
+      <DependentUpon>Custommers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Drivers.aspx.cs">
+      <DependentUpon>Drivers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Drivers.aspx.designer.cs">
+      <DependentUpon>Drivers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -399,9 +415,11 @@
       <DependentUpon>Shipments.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\DAL\DBcontext.cs" />
+    <Compile Include="App_Code\DAL\D_Driver.cs" />
+    <Compile Include="App_Code\DAL\D_Customer.cs" />
     <Compile Include="App_Code\DAL\D_Sheipments.cs" />
     <Compile Include="App_Code\DAL\D_User.cs" />
-    <Compile Include="App_Code\Handler1.ashx.cs">
+    <Compile Include="admin\Handler1.ashx.cs">
       <DependentUpon>Handler1.ashx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
@@ -600,7 +618,7 @@
     <Content Include="admin\sb\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="admin\sb\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="admin\sb\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="App_Code\Handler1.ashx" />
+    <Content Include="admin\Handler1.ashx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
