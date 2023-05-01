@@ -16,6 +16,7 @@ namespace gogo_v0._3
         protected void Page_Load(object sender, EventArgs e)
         {
 
+          
         }
 
         protected void Btn_login(object sender, EventArgs e)

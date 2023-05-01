@@ -1,4 +1,5 @@
 ﻿using DAL;
+using gogo_v0._3;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -28,7 +29,25 @@ namespace BLL
         }
 
 
+        public void addDriver(B_Driver driver)
+        {
+           D_Driver.AddUpdate(driver);
 
+      
+
+        }
+
+
+        public static void DeleteById(string Did)
+        {
+            D_Driver.Delete(Did);
+
+        }
+
+        public B_Driver GetById(B_Driver Did)
+        {
+            return D_Driver.GetById(Did);
+        }
 
 
     }

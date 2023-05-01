@@ -12,7 +12,7 @@ namespace gogo_v0._3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            Services.Send_Email("avichay904@gmail.com", "ee", "eeferf");
         }
 
 

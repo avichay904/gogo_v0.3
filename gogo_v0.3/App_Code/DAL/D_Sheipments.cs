@@ -54,9 +54,10 @@ namespace DAL
         {
 
             string SQL = "";
-            if (Tmp.C_id == -1)
+                if (Tmp.S_id == -1)
             {
-                SQL= $"INSERT INTO T_Shipments (C_id,S_dataStart,S_dataEnd,D_id,S_phone,S_city,S_street,S_numeH,S_sumBox,S_toDo,S_picName,S_dataDo,S_msg) Values ({Tmp.C_id},'{Tmp.S_dataStart}','{Tmp.S_dataEnd}' ,{Tmp.D_id} ,'{Tmp.S_Phone}' ,N'{Tmp.S_city}', N'{Tmp.S_street}' ,'{Tmp.S_numeH}',{Tmp.S_sumBox},{Tmp.S_toDo},N'{Tmp.S_picName}','{Tmp.S_dataDo}',N'{Tmp.S_msg}' )";
+                SQL = $"INSERT INTO T_Shipments (C_id,S_dataStart,S_dataEnd,D_id,S_phone,S_city,S_street,S_numeH,S_sumBox,S_toDo,S_picName,S_dataDo,S_msg) Values ({Tmp.C_id},GETDATE(),'{Tmp.S_dataEnd}' ,{Tmp.D_id} ,'{Tmp.S_Phone}' ,N'{Tmp.S_city}', N'{Tmp.S_street}' ,'{Tmp.S_numeH}',{Tmp.S_sumBox},{Tmp.S_toDo},N'{Tmp.S_picName}','{Tmp.S_dataDo}',N'{Tmp.S_msg}' ) ";
+                  
             }
             else
             {
@@ -73,19 +74,51 @@ namespace DAL
 
 
         }
+
+
        
 
         public static B_Shipment GetById (B_Shipment Tmp)
         {
-            string Sql = $"SELECT * FROM T_Shipments WHERE C_id={Tmp.C_id}";
+            string Sql = $"SELECT * FROM T_Shipments WHERE S_id={Tmp.S_id}";
+
+            DBcontext Db = new DBcontext();
+            DataTable Dt = new DataTable();
+            Dt = Db.Excute(Sql);
+            Db.Close();
+
+
+
+            for (int i = 0; i < Dt.Rows.Count; i++)
+            {
+
+                Tmp.C_id = int.Parse(Dt.Rows[i]["C_id"] + "");
+                Tmp.S_dataStart = Dt.Rows[i]["S_dataStart"] + "";
+                Tmp.S_dataEnd = Dt.Rows[i]["S_dataEnd"] + "";
+                Tmp.D_id = int.Parse(Dt.Rows[i]["D_id"] + "");
+                Tmp.S_Phone = Dt.Rows[i]["S_phone"] + "";
+                Tmp.S_city = Dt.Rows[i]["S_city"] + "";
+                Tmp.S_street = Dt.Rows[i]["S_street"] + "";
+                Tmp.S_numeH = Dt.Rows[i]["S_numeH"] + "";
+                Tmp.S_sumBox = int.Parse(Dt.Rows[i]["S_sumBox"] + "");
+                Tmp.S_msg = Dt.Rows[i]["S_msg"] + "";
+
+
+            }
+
+            return Tmp;
+
+        }
+
+
+        public static void Delete(string Tmp)
+        {
+            string Sql = $"DELETE FROM T_Shipments WHERE S_id={Tmp} ";
 
             DBcontext Db = new DBcontext();
             Db.ExcuteNonQury(Sql);
 
 
-
-
-            return Tmp;
 
         }
 

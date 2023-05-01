@@ -1,10 +1,7 @@
-﻿using System;
+﻿using BLL;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Newtonsoft;
-using BLL;
 using System.Text;
+using System.Web;
 
 namespace gogo_v0._3.App_Code
 {
@@ -13,38 +10,38 @@ namespace gogo_v0._3.App_Code
     /// </summary>
     public class Handler1 : IHttpHandler
     {
- 
+
         public void ProcessRequest(HttpContext context)
         {
 
 
-            StringBuilder Sb= new StringBuilder();
+            StringBuilder Sb = new StringBuilder();
 
             string dt = context.Request["dt"];// במידה קיבלנו בבקשה פרמטר?
-            
-            
-
-                List<B_Shipment>lst=B_Shipment.GetAll();// שליפת גול המוצרים
-
-                Sb.AppendLine("<TABLE>");
-                foreach(B_Shipment x in lst)
-                {
-                    Sb.AppendLine("<tr>");
-                    Sb.AppendLine($"<td> {x.S_city}</td>");
-                    Sb.AppendLine($"<td> {x.D_id}</td>");
-                    Sb.AppendLine($"<td> {x.S_city}</td>");
-                    Sb.AppendLine($"<td> {x.S_city}</td>");
-                    Sb.AppendLine("</tr>");
-                }
-                Sb.AppendLine("</TABLE>");
 
 
 
+            List<B_Shipment> lst = B_Shipment.GetAll();// שליפת גול המוצרים
 
-                context.Response.Write( Sb.ToString()); 
-               
+            Sb.AppendLine("<TABLE>");
+            foreach (B_Shipment x in lst)
+            {
+                Sb.AppendLine("<tr>");
+                Sb.AppendLine($"<td> {x.S_city}</td>");
+                Sb.AppendLine($"<td> {x.D_id}</td>");
+                Sb.AppendLine($"<td> {x.S_city}</td>");
+                Sb.AppendLine($"<td> {x.S_city}</td>");
+                Sb.AppendLine("</tr>");
+            }
+            Sb.AppendLine("</TABLE>");
 
-            
+
+
+
+            context.Response.Write(Sb.ToString());
+
+
+
             //context-Disposition", $"attachment; filename={dt}.xls");
             context.Response.ContentType = "application/vnd.ms-excel";
             context.Response.AddHeader("Content-Disposition", $"attachment; filename={dt}.xls");

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI.WebControls;
 using DAL;
+using gogo_v0._3;
 
 namespace BLL
 {
@@ -16,6 +17,7 @@ namespace BLL
         public int U_title { get; set;}
         public string U_name { get; set;}
         public string U_phone { get; set;}
+        public string U_Token { get; set;}
 
         public B_User() { }
 
@@ -27,6 +29,7 @@ namespace BLL
             U_title = u_title;
             U_name = u_name;
             U_phone = u_phone;
+
         }
 
 
@@ -57,8 +60,23 @@ namespace BLL
         }
 
 
+        // אם המייל קיים את הוא מכניס תוקן 
+        public bool Check_Email(B_User person)
+        { 
+          
+            person.U_Token= Services.GetRandStr(person.U_email.Length);
+            return D_User.CheckEmail(person);
+        }
 
 
+        public bool Chack_Token(B_User person)
+        {
+            return D_User.CheckToken(person);
+        }
+        public void resetPass(B_User person)
+        {
+            D_User.resetPass(person);
+        }
 
 
 

@@ -1,4 +1,5 @@
 ﻿using DAL;
+using gogo_v0._3;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,5 +22,28 @@ namespace BLL
         {
             return D_Customer.GetAll();
         }
+
+        public void addCustomer(B_Customer Customer)
+        {
+            D_Customer.AddUpdate(Customer);
+
+            string Body = $"<h1>{Customer.C_name} ברוך הבא לצוות הנהגים</h1>";
+          //  Services.Send_Email(Customer.C_email, "הרשמה לנהג", Body);
+
+
+        }
+
+        public static void DeleteById(string Cid)
+        {
+            D_Customer.Delete(Cid);
+
+        }
+
+        public B_Customer GetById(B_Customer Cid)
+        {
+            return D_Customer.GetById(Cid);
+        }
+
+
     }
 }

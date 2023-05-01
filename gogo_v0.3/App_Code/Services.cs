@@ -4,7 +4,9 @@ using System.Linq;
 using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 using System.Web;
+
 
   
 namespace gogo_v0._3
@@ -42,8 +44,9 @@ namespace gogo_v0._3
 
 
 
-            // פונקציה הקבלת נמען  לשליחת מיילים
-            public static bool Send_Email(string To, string Subject, string body)
+
+        // פונקציה הקבלת נמען  לשליחת מיילים
+        public static  bool Send_Email(string To, string Subject, string body)
             {
                 try
                 {
@@ -62,14 +65,14 @@ namespace gogo_v0._3
 
                     newMail.IsBodyHtml = true; newMail.Body = $"<p>{body}</p>";
 
-                    // enable SSL for encryption across channels
-                    client.EnableSsl = true;
+                // enable SSL for encryption across channels
+                client.EnableSsl = true;
                     // Port 465 for SSL communication
                     client.Port = 587;
-                // Provide authentication information with Gmail SMTP server to authenticate your sender account
+                  // Provide authentication information with Gmail SMTP server to authenticate your sender account
 
-                client.Credentials = new System.Net.NetworkCredential("", "");
-                    client.Credentials = new System.Net.NetworkCredential("", "incynvqisezl");
+                 
+                    client.Credentials = new System.Net.NetworkCredential("avichay904", "sazcwzluigpodmwb");
 
 
                     client.Send(newMail);
@@ -115,6 +118,10 @@ namespace gogo_v0._3
                 return RetVal;
             }
 
-        
+
+
+
+
+
     }
 }

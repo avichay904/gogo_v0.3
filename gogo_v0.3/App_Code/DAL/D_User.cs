@@ -80,7 +80,77 @@ namespace DAL
             return true;
 
         }
+        public static bool CheckEmail(B_User Tmp)
+        {
+
+            DBcontext Db = new DBcontext();
+
+
+            string Sql = $"SELECT * FROM T_Users WHERE U_email='{Tmp.U_email}'";
+            string sql2 = $"UPDATE T_Users set U_Token='{Tmp.U_Token}' where U_email='{Tmp.U_email}'";
+            DataTable Dt = Db.Excute(Sql);
+
+            if (Dt.Rows.Count > 0)
+            {
+                Db.ExcuteNonQury(sql2);
+
+                Db.Close();
+                return true;
+
+            }
+            Db.Close();
+            return false;
+
+        }
+
+
+        public static bool CheckToken(B_User Tmp)
+        {
+
+            DBcontext Db = new DBcontext();
+
+
+            string Sql = $"SELECT * FROM T_Users WHERE U_Token='{Tmp.U_Token}'";
+            string sql2 = $"UPDATE T_Users set U_Token='' where U_email='{Tmp.U_email}'";
+            DataTable Dt = Db.Excute(Sql);
+
+            if (Dt.Rows.Count > 0)
+            {
+                Db.ExcuteNonQury(sql2);
+
+                Db.Close();
+                return true;
+
+            }
+            Db.Close();
+            return false;
+
+        }
+
+
+
+
+        public static void resetPass(B_User Tmp)
+        {
+
+            DBcontext Db = new DBcontext();
+
+
+           
+            string sql = $"UPDATE T_Users set U_pass='{Tmp.U_psss}' where U_email='{Tmp.U_email}'";
+            
+
+                Db.ExcuteNonQury(sql);
+
+        
+            Db.Close();
+            
+
+        }
+
+
+
 
     }
-    
+
 }

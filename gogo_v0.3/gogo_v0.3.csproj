@@ -43,12 +43,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Google.Apis, Version=1.60.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.60.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.60.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.60.0\lib\net461\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.60.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.60.0\lib\net461\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.60.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.60.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Gmail.v1, Version=1.60.0.2958, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Gmail.v1.1.60.0.2958\lib\net45\Google.Apis.Gmail.v1.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.60.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.60.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.Bson.1.0.2\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -59,6 +81,12 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.9\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.9\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -73,6 +101,56 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404.aspx" />
+    <Content Include="Administretor\AddDriver.aspx" />
+    <Content Include="Administretor\Add Marlog.aspx" />
+    <Content Include="Administretor\AddShipments.aspx" />
+    <Content Include="Administretor\CreateRoute.aspx" />
+    <Content Include="Administretor\dist\401.html" />
+    <Content Include="Administretor\dist\404.html" />
+    <Content Include="Administretor\dist\500.html" />
+    <Content Include="Administretor\dist\assets\demo\chart-area-demo.js" />
+    <Content Include="Administretor\dist\assets\demo\chart-bar-demo.js" />
+    <Content Include="Administretor\dist\assets\demo\chart-pie-demo.js" />
+    <Content Include="Administretor\dist\assets\demo\datatables-demo.js" />
+    <Content Include="Administretor\dist\assets\img\error-404-monochrome.svg" />
+    <Content Include="Administretor\dist\charts.html" />
+    <Content Include="Administretor\dist\css\styles.css" />
+    <Content Include="Administretor\dist\index.html" />
+    <Content Include="Administretor\dist\js\GoogleApi\autocomplete.js" />
+    <Content Include="Administretor\dist\js\datatables-simple-demo.js" />
+    <Content Include="Administretor\dist\js\GoogleApi\GoogleApiKey.js" />
+    <Content Include="Administretor\dist\js\scripts.js" />
+    <Content Include="Administretor\dist\layout-sidenav-light.html" />
+    <Content Include="Administretor\dist\layout-static.html" />
+    <Content Include="Administretor\dist\login.html" />
+    <Content Include="Administretor\dist\password.html" />
+    <Content Include="Administretor\dist\register.html" />
+    <Content Include="Administretor\dist\tables.html" />
+    <Content Include="Administretor\Drivers.aspx" />
+    <Content Include="Administretor\Home.aspx" />
+    <Content Include="Administretor\Marlogs.aspx" />
+    <Content Include="Administretor\scripts\build-assets.js" />
+    <Content Include="Administretor\scripts\build-pug.js" />
+    <Content Include="Administretor\scripts\build-scripts.js" />
+    <Content Include="Administretor\scripts\build-scss.js" />
+    <Content Include="Administretor\scripts\clean.js" />
+    <Content Include="Administretor\scripts\render-assets.js" />
+    <Content Include="Administretor\scripts\render-pug.js" />
+    <Content Include="Administretor\scripts\render-scripts.js" />
+    <Content Include="Administretor\scripts\render-scss.js" />
+    <Content Include="Administretor\scripts\sb-watch.js" />
+    <Content Include="Administretor\scripts\start-debug.js" />
+    <Content Include="Administretor\scripts\start.js" />
+    <Content Include="Administretor\Shipments.aspx" />
+    <Content Include="Administretor\src\assets\demo\chart-area-demo.js" />
+    <Content Include="Administretor\src\assets\demo\chart-bar-demo.js" />
+    <Content Include="Administretor\src\assets\demo\chart-pie-demo.js" />
+    <Content Include="Administretor\src\assets\demo\datatables-demo.js" />
+    <Content Include="Administretor\src\assets\img\error-404-monochrome.svg" />
+    <Content Include="Administretor\src\js\datatables-simple-demo.js" />
+    <Content Include="Administretor\src\js\scripts.js" />
+    <Content Include="Administretor\UpdataShipment.aspx" />
     <Content Include="admin\css\font-awesome.css" />
     <Content Include="admin\css\font-awesome.min.css" />
     <Content Include="admin\css\simple-line-icons.css" />
@@ -373,12 +451,91 @@
     <Content Include="admin\sb\js\sb-admin-2.js" />
     <Content Include="admin\sb\panels-wells.html" />
     <Content Include="admin\Shipments.aspx" />
+    <Content Include="forgot Pass.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Register.aspx" />
+    <Content Include="ResetPass.aspx" />
     <Content Include="Web.config" />
     <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administretor\AddDriver.aspx.cs">
+      <DependentUpon>AddDriver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administretor\AddDriver.aspx.designer.cs">
+      <DependentUpon>AddDriver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administretor\Add Marlog.aspx.cs">
+      <DependentUpon>Add Marlog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administretor\Add Marlog.aspx.designer.cs">
+      <DependentUpon>Add Marlog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administretor\AddShipments.aspx.cs">
+      <DependentUpon>AddShipments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administretor\AddShipments.aspx.designer.cs">
+      <DependentUpon>AddShipments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administretor\admin3.Master.cs">
+      <DependentUpon>admin3.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administretor\admin3.Master.designer.cs">
+      <DependentUpon>admin3.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Administretor\CreateRoute.aspx.cs">
+      <DependentUpon>CreateRoute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administretor\CreateRoute.aspx.designer.cs">
+      <DependentUpon>CreateRoute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administretor\Drivers.aspx.cs">
+      <DependentUpon>Drivers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administretor\Drivers.aspx.designer.cs">
+      <DependentUpon>Drivers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administretor\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administretor\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administretor\Marlogs.aspx.cs">
+      <DependentUpon>Marlogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administretor\Marlogs.aspx.designer.cs">
+      <DependentUpon>Marlogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administretor\Shipments.aspx.cs">
+      <DependentUpon>Shipments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administretor\Shipments.aspx.designer.cs">
+      <DependentUpon>Shipments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administretor\UpdataShipment.aspx.cs">
+      <DependentUpon>UpdataShipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administretor\UpdataShipment.aspx.designer.cs">
+      <DependentUpon>UpdataShipment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\admin.Master.cs">
       <DependentUpon>admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -414,6 +571,8 @@
     <Compile Include="admin\Shipments.aspx.designer.cs">
       <DependentUpon>Shipments.aspx</DependentUpon>
     </Compile>
+    <Compile Include="api\v1\test.cs" />
+    <Compile Include="api\v1\ValuesController1.cs" />
     <Compile Include="App_Code\DAL\DBcontext.cs" />
     <Compile Include="App_Code\DAL\D_Driver.cs" />
     <Compile Include="App_Code\DAL\D_Customer.cs" />
@@ -421,6 +580,13 @@
     <Compile Include="App_Code\DAL\D_User.cs" />
     <Compile Include="admin\Handler1.ashx.cs">
       <DependentUpon>Handler1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="forgot Pass.aspx.cs">
+      <DependentUpon>forgot Pass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgot Pass.aspx.designer.cs">
+      <DependentUpon>forgot Pass.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -444,6 +610,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPass.aspx.cs">
+      <DependentUpon>ResetPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPass.aspx.designer.cs">
+      <DependentUpon>ResetPass.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -619,6 +792,46 @@
     <Content Include="admin\sb\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="admin\sb\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="admin\Handler1.ashx" />
+    <Content Include="Administretor\src\pug\layouts\authentication.pug" />
+    <Content Include="Administretor\src\pug\layouts\dashboard.pug" />
+    <Content Include="Administretor\src\pug\layouts\error.pug" />
+    <Content Include="Administretor\src\pug\layouts\includes\footer.pug" />
+    <Content Include="Administretor\src\pug\layouts\includes\head\css.pug" />
+    <Content Include="Administretor\src\pug\layouts\includes\head\icons.pug" />
+    <Content Include="Administretor\src\pug\layouts\includes\head\meta.pug" />
+    <Content Include="Administretor\src\pug\layouts\includes\head\title.pug" />
+    <Content Include="Administretor\src\pug\layouts\includes\navigation\sidenav.pug" />
+    <Content Include="Administretor\src\pug\layouts\includes\navigation\topnav.pug" />
+    <Content Include="Administretor\src\pug\layouts\includes\scripts.pug" />
+    <Content Include="Administretor\src\pug\pages\401.pug" />
+    <Content Include="Administretor\src\pug\pages\404.pug" />
+    <Content Include="Administretor\src\pug\pages\500.pug" />
+    <Content Include="Administretor\src\pug\pages\charts.pug" />
+    <Content Include="Administretor\src\pug\pages\includes\datatable.pug" />
+    <Content Include="Administretor\src\pug\pages\includes\page-header.pug" />
+    <Content Include="Administretor\src\pug\pages\index.pug" />
+    <Content Include="Administretor\src\pug\pages\layout-sidenav-light.pug" />
+    <Content Include="Administretor\src\pug\pages\layout-static.pug" />
+    <Content Include="Administretor\src\pug\pages\login.pug" />
+    <Content Include="Administretor\src\pug\pages\password.pug" />
+    <Content Include="Administretor\src\pug\pages\register.pug" />
+    <Content Include="Administretor\src\pug\pages\tables.pug" />
+    <Content Include="Administretor\src\scss\layout\_authentication.scss" />
+    <Content Include="Administretor\src\scss\layout\_dashboard-default.scss" />
+    <Content Include="Administretor\src\scss\layout\_dashboard-fixed.scss" />
+    <Content Include="Administretor\src\scss\layout\_error.scss" />
+    <Content Include="Administretor\src\scss\navigation\sidenav\_sidenav-dark.scss" />
+    <Content Include="Administretor\src\scss\navigation\sidenav\_sidenav-light.scss" />
+    <Content Include="Administretor\src\scss\navigation\sidenav\_sidenav.scss" />
+    <Content Include="Administretor\src\scss\navigation\_nav.scss" />
+    <Content Include="Administretor\src\scss\navigation\_topnav.scss" />
+    <Content Include="Administretor\src\scss\plugins\simple-datatables.scss" />
+    <Content Include="Administretor\src\scss\styles.scss" />
+    <Content Include="Administretor\src\scss\variables\_navigation.scss" />
+    <Content Include="Administretor\src\scss\variables\_spacing.scss" />
+    <Content Include="Administretor\src\scss\_global.scss" />
+    <Content Include="Administretor\src\scss\_variables.scss" />
+    <Content Include="Administretor\admin3.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

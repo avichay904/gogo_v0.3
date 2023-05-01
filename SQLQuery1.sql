@@ -1,1 +1,1 @@
-﻿INSERT INTO T_Users (U_email,U_name,U_pass,U_phone) VALUES('s','ss','ss','s')
+﻿UPDATE T_Shipments SET C_id=8 where S_id=128

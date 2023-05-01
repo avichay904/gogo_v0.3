@@ -60,8 +60,8 @@
                                     
                                 </div>
                                 <div class="col-xs-6 text-xs-right">
-                                    <button type="button" class="btn btn-link p-x-0">שכחתי את הסיסמה
-                                        <asp:Button CssClass="btn btn-link p-x-0" Text="שכחתי את הסיסמה" ID="Forgot" OnClick="Forgot_Click" />
+                                    <a type="button" href="forgot Pass.aspx" class="btn btn-link p-x-0">שכחתי את הסיסמה</a>
+                                        <a  class="btn btn-link p-x-0" href="forgot Pass.aspx" Text="שכחתי את הסיסמה"  ></a>
                                     
                                 </div>
                             </div>
@@ -72,7 +72,9 @@
                             <div>
                                 <h2>GoGo</h2>
                                 <p>ניהול מרלוגים ושליחויות</p>
-                                <button type="button" class="btn btn-primary active m-t-1">הירשם</button>
+                                <a type="button" href="Register.aspx" class="btn btn-primary active m-t-1">הירשם</a>
+
+                                   <asp:RegularExpressionValidator ID="EmailRegularExpressionValidator" runat="server" ControlToValidate="EmailTextBox" ErrorMessage="Invalid email address" ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" Display="Dynamic"></asp:RegularExpressionValidator>
                             </div>
                         </div>
                     </div>
