@@ -16,8 +16,8 @@ namespace gogo_v0._3.App_Code
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            
-            
+            GlobalConfiguration.Configure(WebApiConfig.Register);
+
         }
 
         protected void Session_Start(object sender, EventArgs e)

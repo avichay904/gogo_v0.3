@@ -39,14 +39,14 @@
                         </thead>
                         <tbody>
 
-                            <asp:Repeater ID="rpt" runat="server">
+                            <asp:Repeater ID="rpt" runat="server" OnItemDataBound="rpt_ItemDataBound">
                                 <ItemTemplate>
 
                                     <tr>
                                         <td><%#Eval("S_city") %></td>
                                         <td><%#Eval("S_street") %></td>
                                         <td><%#Eval("S_dataStart") %></td>
-                                        <td><%#Eval("D_id") %></td>
+                                        <td><asp:Literal ID="ltl_Driver" runat="server" /></td>
                                         <td><%#Eval("S_city") %></td>
                                         <td><%#Eval("S_id") %></td>
                                         <td><a href="AddShipments.aspx?Sid=<%#Eval("S_id") %>&op=del" class="btn btn-outline-warning btn-sm">delete</a> 

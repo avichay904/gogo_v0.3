@@ -44,7 +44,7 @@ namespace BLL
 
         }
 
-        public B_Driver GetById(B_Driver Did)
+        public static B_Driver  GetById(int Did)
         {
             return D_Driver.GetById(Did);
         }

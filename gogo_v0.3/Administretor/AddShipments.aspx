@@ -48,22 +48,13 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-
-                                <select class="form-select">
-                                    <option selected id="Cname" runat="server">Marlog</option>
-                                    <asp:Repeater ID="rpt" runat="server">
-                                        <ItemTemplate>
-                                            <option value="1" id="Op" runat="server"><%#Eval("C_name") %></option>
-
-                                        </ItemTemplate>
-                                    </asp:Repeater>
-
-                                </select>
+                        
+                                <asp:DropDownList id="Cname" runat="server" />
+                               
                             </div>
 
                             <div class="col">
-                                <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                             
 
 
                                 <div class="row-cols-xxl-1">
@@ -72,7 +63,7 @@
 
                                     <asp:Repeater ID="Repiter" runat="server">
                                         <ItemTemplate>
-                                            <option value="1" "><%#Eval("D_name") %></option>
+                                            <option value="" "><%#Eval("D_name") %></option>
 
                                         </ItemTemplate>
 
@@ -83,7 +74,7 @@
                              
                         </div>
 
-                        <div class="col">
+                        <div class="">
                             <label class="form-label" for="form3Example4cd">mesegess</label>
                             <input class="form-control" type="text" id="msg" runat="server">
                         </div>                       

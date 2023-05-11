@@ -30,8 +30,11 @@ namespace gogo_v0._3.Administretor
 
 
 
-            rpt.DataSource=BLL.B_Customer.GetAll();          
-            rpt.DataBind();
+            Cname.DataSource=BLL.B_Customer.GetAll();
+
+            Cname.DataValueField = "C_id";
+            Cname.DataTextField= "C_name";
+            Cname.DataBind();
            Repiter.DataSource=BLL.B_Driver.GetAll();
             Repiter.DataBind(); 
         }
@@ -53,10 +56,10 @@ namespace gogo_v0._3.Administretor
                 S_sumBox=int.Parse(numBox.Value)+0,          
                 
             };
-            Response.Redirect("Shipments.aspx");
+        
             Tmp.addShipment(Tmp);
+            Response.Redirect("Shipments.aspx");
 
-            
         }
     }
 }

@@ -16,6 +16,7 @@ namespace gogo_v0._3.Administretor
            
             if (!IsPostBack)
             {
+                B_Driver Tmp = new B_Driver();
                 string Did = Request["Did"] + "";
                 string op = Request["op"] + "";
                 if (op == "del")
@@ -27,9 +28,8 @@ namespace gogo_v0._3.Administretor
 
                 if (op == "edit")
                 {
-
-                    B_Driver Tmp = new B_Driver() { D_id = int.Parse(Did), };
-                    Tmp=Tmp.GetById(Tmp);                    
+                      
+                    Tmp= B_Driver.GetById(int.Parse(Did));                    
                     Name.Value= Tmp.D_name;
                     Email.Value = Tmp.D_email;
                   phone.Value = Tmp.D_phone;

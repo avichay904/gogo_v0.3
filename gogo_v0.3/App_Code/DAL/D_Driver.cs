@@ -89,9 +89,9 @@ namespace DAL
 
 
 
-        public static B_Driver GetById(B_Driver Tmp)
+        public static B_Driver GetById(int Did)
         {
-            string Sql = $"SELECT * FROM T_Drivers WHERE D_id={Tmp.D_id}"+"";
+            string Sql = $"SELECT * FROM T_Drivers WHERE D_id={Did}"+"";
 
 
 
@@ -99,15 +99,15 @@ namespace DAL
             DataTable Dt = new DataTable();
             Dt = Db.Excute(Sql);
             Db.Close();
+            B_Driver Tmp=new B_Driver();
 
-            for (int i = 0; i < Dt.Rows.Count; i++)
+            if (Dt.Rows.Count > 0)
             {
-
-                Tmp.D_id = int.Parse(Dt.Rows[i]["D_id"] + "");
-                Tmp.D_name = Dt.Rows[i]["D_name"] + "";
-                Tmp.D_phone = Dt.Rows[i]["D_phone"] + "";
-                Tmp.D_address = Dt.Rows[i]["D_address"] + "";
-                Tmp.D_email = Dt.Rows[i]["D_email"] + "";
+                Tmp.D_id = int.Parse(Dt.Rows[0]["D_id"] + "");
+                Tmp.D_name = Dt.Rows[0]["D_name"] + "";
+                Tmp.D_phone = Dt.Rows[0]["D_phone"] + "";
+                Tmp.D_address = Dt.Rows[0]["D_address"] + "";
+                Tmp.D_email = Dt.Rows[0]["D_email"] + "";
 
 
             }
