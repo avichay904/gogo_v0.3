@@ -487,6 +487,7 @@
     <Content Include="Register.aspx" />
     <Content Include="ResetPass.aspx" />
     <Content Include="test.aspx" />
+    <Content Include="testGoogle.aspx" />
     <Content Include="Web.config" />
     <Content Include="Login.aspx" />
   </ItemGroup>
@@ -658,6 +659,13 @@
     </Compile>
     <Compile Include="test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testGoogle.aspx.cs">
+      <DependentUpon>testGoogle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testGoogle.aspx.designer.cs">
+      <DependentUpon>testGoogle.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

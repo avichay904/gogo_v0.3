@@ -53,7 +53,7 @@
                                         <a href="UpdataShipment.aspx?Sid=<%#Eval("S_id") %>&op=edit" class="btn btn-outline-warning btn-sm">Edit</a>
                                         </td>
                                         <td>    <input class="form-check-input" type="checkbox" name="Shpment" value='<%# Eval("S_id") %>' id="Checks" checked="checked" />
-</td>
+                                        </td>
                                        
                                     </tr>
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="test.aspx.cs" Inherits="gogo_v0._3.test" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="testGoogle.aspx.cs" Inherits="gogo_v0._3.testGoogle" %>
 
 <!DOCTYPE html>
 
@@ -9,7 +9,6 @@
 <body>
     <form id="form1" runat="server">
         <div>
-           
         </div>
     </form>
 </body>

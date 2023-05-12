@@ -1,16 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using gogo_v0._3.api.v1;
 using RestSharp;
+using RestSharp.Authenticators;
 
 namespace gogo_v0._3
 {
     public partial class test : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected async Task Page_LoadAsync(object sender, EventArgs e)
         {
             string aa = "הרצל+18+אשדוד,+ישראל|דם+המכבים+22+יבנה,+ישראל|דיזינגוף+202+תל+אביב,+ישראל|הרצל+10+נתניה,+ישראל|הרצל+40+חיפה,+ישראל";
             string st = "https://maps.googleapis.com/maps/api/directions/json?origin=הגורן+3+מטולה,+ישראל&destination=אילות+8+אילת,+ישראל&waypoints=הראשונים+26+חדרה,+ישראל|הרצל+10+תל+אביב,+ישראל|הרצל+10+באר+שבע,+ישראל&key=AIzaSyA3rNYnv8Z04fskn_1twWn8qO5Jqs4WBSY";
@@ -47,26 +53,22 @@ namespace gogo_v0._3
             string QueryUrl = $"{BaseUrl}origin={OriginUrl}&destination={DestUrl}&waypoints=optimize:true|{WayPoints}&key={AppKey}&waypoiny";
             string ans = "1,3,2,0,4";
 
-
-
-            
-
+            string test = "https://maps.googleapis.com/maps/api/directions/json?origin=הגורן+3+מטולה,+ישראל&destination=אילות+8+אילת,+ישראל&waypoints=optimize:true|הרצל+40+אשדוד,+ישראל|הרצל+3+חיפה,+ישראל|דיזינגוף+202+תל+אביב,+ישראל|הרצל+10+נתניה,+ישראל|הרצל+18+אשדוד,+ישראל&key=AIzaSyAdb8PCEpJNc-q-ojME4uQRdOEV-Kp2UkU&waypoiny" + "";
 
 
 
 
 
 
-            //string[] Order = ans.Split(',');
-            //List<string> Lst = new List<string>();
-            //for (int i = 0; i < Order.Length; i++)
-            //{
-            //    Lst.Add(Address[int.Parse(Order[i])]);
-            //}
-            //for (int i = 0; i < Lst.Count; i++)
-            //{
-            //    Response.Write(Lst[i] + "<br/>");
-            //}
+            using (var client = new WebClient())
+            {
+                var response = client.DownloadString("https://maps.googleapis.com/maps/api/directions/json?origin=הגורן+3+מטולה,+ישראל&destination=אילות+8+אילת,+ישראל&waypoints=optimize:true|הרצל+40+אשדוד,+ישראל|הרצל+3+חיפה,+ישראל|דיזינגוף+202+תל+אביב,+ישראל|הרצל+10+נתניה,+ישראל|הרצל+18+אשדוד,+ישראל&key=YOUR_API_KEY_HERE&waypoints");
+                Response.Write(response);
+            }
+
+
+
+
         }
 
 

@@ -46,19 +46,93 @@
                                     </asp:Repeater>
 
                                 </select>
+        </div>
+
+
+
+
+
+
+                      <div class="col" >
+                    <table >
+
+
+                        <thead class="datatable-table">
+                            <tr>
+                                <th>City</th>
+                                <th>Street</th>
+                                <th>Data </th>
+                                <th>Driver</th>
+                                <th>Start date</th>
+                                <th>Salary</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <asp:Repeater ID="rpt" runat="server" >
+                                <ItemTemplate>
+
+                                    <tr>
+                                        <td><%#Eval("S_city") %></td>
+                                        <td><%#Eval("S_street") %></td>
+                                        <td><%#Eval("S_dataStart") %></td>
+                                   
+                                        <td><%#Eval("S_city") %></td>
+                                        <td><%#Eval("S_id") %></td>
+                                
+                                        </td>
+                                 
+                                       
+                                    </tr>
+
+                                </ItemTemplate>
+
+                            </asp:Repeater>
+                        </tbody>
+                    </table>
+                </div>
+      </div>
+                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                   
+
+                                           <asp:Button runat="server" ID="creatRout" CssClass="btn btn-primary btn-lg  btn-block col-12 m-2 p-2 " Text="Add" OnClick="creatRout_Click" />       
+
+                                        </div>
+
+
+                </div>
+            </div>
         
-                                       <div class="">
-                                    <a class="btn btn-outline-info m-4" href="Shipments.aspx">Back</a>
 
-                                </div>
-                                <div class="col bs-tether-element-attached-right">
-                                    <a class="btn btn-outline-info m-4" href="Shipments.aspx">Creat</a>
 
-                                </div>
-                                </div>
-  
-                 </div>
-                  </div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+    
+
 
     
 

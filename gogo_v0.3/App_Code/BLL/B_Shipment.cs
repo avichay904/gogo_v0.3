@@ -51,6 +51,11 @@ namespace BLL
         }
 
 
+        public static List<B_Shipment> GetById(string Sid)
+        {
+           return D_Sheipments.GetById(Sid) ;
+
+        }
 
 
 
