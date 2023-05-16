@@ -14,27 +14,35 @@ namespace gogo_v0._3.Administretor
     {
         protected   void Page_Load(object sender, EventArgs e)
         {
-            
+           
             string Sid=Request["Sid"];
 
-            
+            if (Sid == null || Sid.Length < 1)
+                Response.Redirect("Shipments.aspx");
             Sid = Sid.TrimEnd(',');
 
-            List<B_Shipment> Lst = B_Shipment.GetById(Sid);
-            rpt.DataSource = Lst;
-            rpt.DataBind();
-            
-
-            Repiter.DataSource = BLL.B_Driver.GetAll();
-            Repiter.DataBind();
+            if (!IsPostBack)
+            {
+                List<B_Shipment> Lst = B_Shipment.GetById(Sid);
+                rpt.DataSource = Lst;
+                rpt.DataBind();
 
 
 
+                // חיבור לדרופדאון של המרלוג
+                Cname.DataSource = BLL.B_Customer.GetAll();
+                Cname.DataValueField = "C_city";
+                Cname.DataTextField = "C_name";
+                Cname.DataBind();
+
+                // חיבור לדרופדאון של הנהגים
+                Dname.DataSource = BLL.B_Driver.GetAll();
+                Dname.DataValueField = "D_id";
+                Dname.DataTextField = "D_address";
+                Dname.DataBind();
 
 
-
-
-
+            }
 
 
 
@@ -43,8 +51,10 @@ namespace gogo_v0._3.Administretor
 
  
 
-        protected async void creatRout_Click(object sender, EventArgs e)
+        protected void creatRout_Click(object sender, EventArgs e)
         {
+
+
             string Sid = Request["Sid"];
             Sid = Sid.TrimEnd(',');
             List<B_Shipment> Lst = B_Shipment.GetById(Sid);
@@ -55,10 +65,9 @@ namespace gogo_v0._3.Administretor
 
             string AppKey = "AIzaSyA3rNYnv8Z04fskn_1twWn8qO5Jqs4WBSY";
             string BaseUrl = "https://maps.googleapis.com/maps/api/directions/json?";
-            string WayPoints = "";          
-            string OriginUrl = "";
-            string DestUrl = dataEnd.Value+"";
-
+            string WayPoints = "";
+            string OriginUrl = Cname.SelectedValue;
+            string DestUrl = Dname.SelectedValue;
 
 
             for(int i = 0; i < Lst.Count; i++)
@@ -68,11 +77,18 @@ namespace gogo_v0._3.Administretor
                 WayPoints += address;
             }
 
-      
+            WayPoints = WayPoints.Substring(0, WayPoints.Length - 1);
+
+
+            string QueryUrl = $"{BaseUrl}origin={OriginUrl}&destination={DestUrl}&waypoints=optimize:true|{WayPoints}&key={AppKey}&waypoiny";
 
 
 
-
+            using (var client = new WebClient())
+            {
+                var response = client.DownloadString(QueryUrl);
+                Response.Write(response);
+            }
 
 
         }

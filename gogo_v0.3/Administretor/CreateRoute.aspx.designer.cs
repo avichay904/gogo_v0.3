@@ -15,15 +15,6 @@ namespace gogo_v0._3.Administretor
     {
 
         /// <summary>
-        /// phone control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText phone;
-
-        /// <summary>
         /// dataEnd control.
         /// </summary>
         /// <remarks>
@@ -33,13 +24,22 @@ namespace gogo_v0._3.Administretor
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl dataEnd;
 
         /// <summary>
-        /// Repiter control.
+        /// Dname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repiter;
+        protected global::System.Web.UI.WebControls.DropDownList Dname;
+
+        /// <summary>
+        /// Cname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Cname;
 
         /// <summary>
         /// rpt control.
