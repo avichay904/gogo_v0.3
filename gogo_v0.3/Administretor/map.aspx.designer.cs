@@ -11,7 +11,7 @@ namespace gogo_v0._3.Administretor
 {
 
 
-    public partial class Home
+    public partial class map
     {
     }
 }

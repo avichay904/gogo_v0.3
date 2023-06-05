@@ -44,13 +44,16 @@ namespace BLL
             D_Sheipments.Delete(Sid);
 
         }
+
+
+
         public  void GetById(B_Shipment Sid)
         {
             D_Sheipments.GetById(Sid);
 
         }
 
-
+        // פעולה המקבלת מחרוזת של
         public static List<B_Shipment> GetById(string Sid)
         {
            return D_Sheipments.GetById(Sid) ;

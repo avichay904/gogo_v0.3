@@ -68,11 +68,13 @@ namespace BLL
             return D_User.CheckEmail(person);
         }
 
-
+        // אם התוקן קיים מחזיר אמת
         public bool Chack_Token(B_User person)
         {
             return D_User.CheckToken(person);
         }
+
+        // פעולה המכניסה את הסיסמה החדשה
         public void resetPass(B_User person)
         {
             D_User.resetPass(person);

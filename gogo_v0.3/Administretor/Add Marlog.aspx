@@ -1,9 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Administretor/admin3.Master" AutoEventWireup="true" CodeBehind="Add Marlog.aspx.cs" Inherits="gogo_v0._3.Administretor.AddMarlog" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    
+
     <div class="container-fluid">
         <div class="container">
 
@@ -17,41 +18,40 @@
                                     <div class="card-body p-5 m-3">
                                         <h2 class="text-uppercase text-center mb-5 p-5">Create a Marlog </h2>
 
-                                        <form>
+
+                                        <div class="form-outline mb-4">
+                                            <input type="text" id="name" runat="server" class="form-control form-control-lg" />
+                                            <label class="form-label" for="form3Example1cg">Marlog Name</label>
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <input type="email" id="email" runat="server" class="form-control form-control-lg" />
+                                            <label class="form-label" for="form3Example3cg">marlog Email</label>
 
                                             <div class="form-outline mb-4">
-                                                <input type="text" id="name" runat="server" class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3Example1cg">Marlog Name</label>
+                                                <input type="text" id="phone" runat="server" class="form-control form-control-lg" />
+                                                <label class="form-label" for="form3Example3cg">phone</label>
                                             </div>
 
                                             <div class="form-outline mb-4">
-                                                <input type="email" id="email" runat="server"  class="form-control form-control-lg" />
-                                                <label class="form-label" for="form3Example3cg">marlog Email</label>
+                                                <input type="text" id="city" runat="server" class="form-control form-control-lg" />
+                                                <label class="form-label" for="form3Example3cg">city</label>
+                                            </div>
+                                            <div class="form-outline mb-4">
+                                                <input type="text" id="street" runat="server" class="form-control form-control-lg" />
+                                                <label class="form-label" for="form3Example3cg">street</label>
+                                            </div>
+                                            <div class="form-outline mb-4">
+                                                <input type="text" id="nHome" runat="server" class="form-control form-control-lg" style="z-index: 9999" />
+                                                <label class="form-label" for="form3Example3cg">street nume</label>
+                                            </div>
 
-                                                <div class="form-outline mb-4">
-                                                    <input type="text" id="phone" runat="server" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Example3cg">phone</label>
-                                                </div>
+                                            <div class="d-flex justify-content-center">
+                                                <asp:Button ID="btnAdd" Style="z-index: 9999" CssClass="btn btn-warning myCss  btn-lg gradient-custom-4 text-body" OnClick="btnAdd_Click" Text="Add marlog" runat="server" />
 
-                                                <div class="form-outline mb-4">
-                                                    <input type="text" id="city" runat="server" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Example3cg">city</label>
-                                                </div>
-                                                     <div class="form-outline mb-4">
-                                                    <input type="text" id="street" runat="server" class="form-control form-control-lg" />
-                                                    <label class="form-label" for="form3Example3cg">street</label>
-                                                </div>
-                                                 <div class="form-outline mb-4">
-                                                    <input type="text" id="nHome" runat="server" class="form-control form-control-lg" style="z-index:9999" />
-                                                    <label class="form-label" for="form3Example3cg">street nume</label>
-                                                </div>
+                                            </div>
 
-                                                <div class="d-flex justify-content-center">
-                                                    <asp:Button ID="btnAdd" style="z-index:9999"  CssClass="btn btn-warning myCss  btn-lg gradient-custom-4 text-body" OnClick="btnAdd_Click" Text="Add marlog" runat="server" />
-                                                   
-                                                </div>
-                                        </form>
-
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -27,7 +27,7 @@ namespace gogo_v0._3
                 {
                     var waypointOrder = parsedResponse["routes"][0]["waypoint_order"];
 
-                  
+                
                 }
             }
             

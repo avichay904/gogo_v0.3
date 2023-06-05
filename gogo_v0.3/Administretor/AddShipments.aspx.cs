@@ -26,17 +26,24 @@ namespace gogo_v0._3.Administretor
                 }
 
 
+
+
+
+
+                Cname.DataSource = BLL.B_Customer.GetAll();
+
+                Cname.DataValueField = "C_id";
+                Cname.DataTextField = "C_name";
+                Cname.DataBind();
+
+                Dname.DataSource = B_Driver.GetAll();
+                Dname.DataValueField = "D_id";
+                Dname.DataTextField = "D_name";
+                Dname.DataBind(); 
+
+
+           
             }
-
-
-
-            Cname.DataSource=BLL.B_Customer.GetAll();
-
-            Cname.DataValueField = "C_id";
-            Cname.DataTextField= "C_name";
-            Cname.DataBind();
-           Repiter.DataSource=BLL.B_Driver.GetAll();
-            Repiter.DataBind(); 
         }
 
         protected void Btn_Click(object sender, EventArgs e)
@@ -53,8 +60,14 @@ namespace gogo_v0._3.Administretor
                 S_street = locality.Text+"",
                 S_msg = msg.Value + "",
                 S_numeH = street_number.Text + "0",      
-                S_sumBox=int.Parse(numBox.Value)+0,          
+                S_sumBox=int.Parse(numBox.Value),
+                C_id=int.Parse(Cname.SelectedValue),
+                D_id= int.Parse(Dname.SelectedValue),
+
                 
+
+
+
             };
         
             Tmp.addShipment(Tmp);

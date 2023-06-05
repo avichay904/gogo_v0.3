@@ -12,10 +12,12 @@ namespace gogo_v0._3.Administretor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
 
-            rpt.DataSource = B_Customer.GetAll();
-            rpt.DataBind();
-
+                rpt.DataSource = B_Customer.GetAll();
+                rpt.DataBind();
+            }
         }
     }
 }

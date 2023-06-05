@@ -32,12 +32,12 @@ namespace gogo_v0._3.Administretor
 
                     B_Customer Tmp = new B_Customer() { C_id=int.Parse(Sid)};
                     Tmp = Tmp.GetById(Tmp);
-                    email.Value = Tmp.C_email;
-                    phone.Value = Tmp.C_phone;
-                    name.Value = Tmp.C_name;
-                    city.Value = Tmp.C_city;
-                    street.Value = Tmp.C_street;
-                    city.Value = Tmp.C_city;
+                    email.Value = Tmp.C_email+"";
+                    phone.Value = Tmp.C_phone+"";
+                    name.Value = Tmp.C_name + "";
+                    city.Value = Tmp.C_city + "";
+                    street.Value = Tmp.C_street + "";
+                    city.Value = Tmp.C_city + "";
                     
                 }
 
@@ -56,12 +56,12 @@ namespace gogo_v0._3.Administretor
             B_Customer Tmp = new B_Customer()
             {
                 C_id =int.Parse(Cid),
-                C_name = name.Value,
-                C_city = city.Value,
-                C_email = email.Value,
-                C_phone = phone.Value,
-                C_street = street.Value,
-                C_nHome = nHome.Value,
+                C_name = name.Value+"",
+                C_city = city.Value + "",
+                C_email = email.Value + "",
+                C_phone = phone.Value + "",
+                C_street = street.Value + "",
+                C_nHome = nHome.Value + "",
             };
 
             Tmp.addCustomer(Tmp);

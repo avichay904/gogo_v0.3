@@ -42,12 +42,12 @@ namespace gogo_v0._3.Administretor
                 S_id =int.Parse( Request["Sid"]),
                 S_city = route.Text+"",
 
-                S_dataEnd = dataEnd.Value,
-                S_Phone = phone.Value,
-                S_street = locality.Text,
+                S_dataEnd = dataEnd.Value+"",
+                S_Phone = phone.Value+"",
+                S_street = locality.Text+"",
                 S_msg = msg.Value+"",
-                S_numeH = street_number.Text,
-                S_sumBox = int.Parse(numBox.Value),
+                S_numeH = street_number.Text + "",
+                S_sumBox = int.Parse(numBox.Value+""),
 
             };
 

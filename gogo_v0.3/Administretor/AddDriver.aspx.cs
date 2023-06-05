@@ -30,10 +30,10 @@ namespace gogo_v0._3.Administretor
                 {
                       
                     Tmp= B_Driver.GetById(int.Parse(Did));                    
-                    Name.Value= Tmp.D_name;
-                    Email.Value = Tmp.D_email;
-                  phone.Value = Tmp.D_phone;
-                    Address.Value = Tmp.D_address;
+                    Name.Value= Tmp.D_name + "";
+                    Email.Value = Tmp.D_email + "";
+                  phone.Value = Tmp.D_phone + "";
+                    Address.Value = Tmp.D_address + "";
                 }
 
 
@@ -50,17 +50,22 @@ namespace gogo_v0._3.Administretor
             B_Driver Tmp = new B_Driver()
             {
 
-                D_name = Name.Value,
-                D_address = Address.Value,
-                D_email = Email.Value,
-                D_phone = phone.Value,
-                D_id = int.Parse(Did),
+                D_name = Name.Value + "",
+                D_address = Address.Value + "",
+                D_email = Email.Value + "",
+                D_phone = phone.Value + "",
+                D_id = int.Parse(Did)
             };
          
             
                 Tmp.addDriver(Tmp);
             Response.Redirect("drivers.aspx");
 
+
+        }
+
+        protected void add_Click(object sender, EventArgs e)
+        {
 
         }
     }

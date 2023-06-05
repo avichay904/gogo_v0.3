@@ -49,28 +49,13 @@
                         <div class="row">
                             <div class="col">
                         
-                                <asp:DropDownList id="Cname" runat="server" />
+                                <asp:DropDownList id="Cname" CssClass="row-cols-xxl-1 form-select" runat="server" />
                                
                             </div>
 
                             <div class="col">
                              
-
-
-                                <div class="row-cols-xxl-1">
-                                <select class="form-select">
-                                    <option selected>Driver</option>
-
-                                    <asp:Repeater ID="Repiter" runat="server">
-                                        <ItemTemplate>
-                                            <option value="" "><%#Eval("D_name") %></option>
-
-                                        </ItemTemplate>
-
-                                    </asp:Repeater>
-
-                                </select>
-                            </div>
+                                 <asp:DropDownList id="Dname" CssClass="row-cols-xxl-1 form-select" runat="server" />
                              
                         </div>
 

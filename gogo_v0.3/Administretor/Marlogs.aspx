@@ -42,8 +42,8 @@
                                         <td><%#Eval("C_city") %></td>
                                         <td><%#Eval("C_email") %></td>
                                           <td>
-                                              <a href="Add Marlog.aspx?Sid=<%#Eval("C_id") %>&op=del" class="btn btn-outline-warning btn-lg "></a>
-                                              <a href="Add Marlog.aspx?Sid=<%#Eval("C_id") %>&op=edit" class="btn btn-outline-warning btn-lg "></a>
+                                              <a href="Add Marlog.aspx?Sid=<%#Eval("C_id") %>&op=del" class="btn btn-outline-warning btn-lg ">delat</a>
+                                              <a href="Add Marlog.aspx?Sid=<%#Eval("C_id") %>&op=edit" class="btn btn-outline-warning btn-lg ">edit</a>
 
                                           </td>
 

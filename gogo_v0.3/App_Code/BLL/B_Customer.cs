@@ -23,6 +23,7 @@ namespace BLL
             return D_Customer.GetAll();
         }
 
+         //הוספת מרלוג
         public void addCustomer(B_Customer Customer)
         {
             D_Customer.AddUpdate(Customer);
@@ -32,7 +33,7 @@ namespace BLL
 
 
         }
-
+        // מחיקה
         public static void DeleteById(string Cid)
         {
             D_Customer.Delete(Cid);
