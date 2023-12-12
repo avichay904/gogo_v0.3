@@ -82,13 +82,13 @@ namespace DAL
             string SQL = "";
             if (Tmp.C_id == -1)
             {
-                SQL = $"INSERT INTO T_Customer (C_name,C_phone,C_city,C_street,C_nHome,C_email) Values ('{Tmp.C_name}','{Tmp.C_phone}','{Tmp.C_city}','{Tmp.C_street} ','{Tmp.C_nHome}','{Tmp.C_email}' )";
+                SQL = $"INSERT INTO T_Customer (C_name,C_phone,C_city,C_street,C_nHome,C_email) Values (N'{Tmp.C_name}',N'{Tmp.C_phone}',N'{Tmp.C_city}',N'{Tmp.C_street} ',N'{Tmp.C_nHome}','{Tmp.C_email}' )";
 
             }
             else
             {
 
-                SQL = $"UPDATE T_Customer SET C_name='{Tmp.C_name}',C_phone='{Tmp.C_phone}' ,C_city='{Tmp.C_city}',C_street='{Tmp.C_street}' ,C_nHome='{Tmp.C_nHome}' ,C_email='{Tmp.C_email}' WHERE C_id={Tmp.C_id} ";
+                SQL = $"UPDATE T_Customer SET C_name=N'{Tmp.C_name}',C_phone=N'{Tmp.C_phone}' ,C_city=N'{Tmp.C_city}',C_street=N'{Tmp.C_street}' ,C_nHome=N'{Tmp.C_nHome}' ,C_email='{Tmp.C_email}' WHERE C_id={Tmp.C_id} ";
 
             }
 

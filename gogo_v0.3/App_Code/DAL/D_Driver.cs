@@ -55,13 +55,13 @@ namespace DAL
             string SQL = "";
             if (Tmp.D_id == -1)
             {
-                SQL = $"INSERT INTO T_Drivers (D_name,D_phone,D_address,D_email) Values ('{Tmp.D_name}','{Tmp.D_phone}','{Tmp.D_address}','{Tmp.D_email}' )";
+                SQL = $"INSERT INTO T_Drivers (D_name,D_phone,D_address,D_email) Values (N'{Tmp.D_name}',N'{Tmp.D_phone}',N'{Tmp.D_address}',N'{Tmp.D_email}' )";
 
             }
             else
             {
 
-                SQL = $"UPDATE T_Drivers SET D_name='{Tmp.D_name}',D_phone='{Tmp.D_phone}' ,D_address='{Tmp.D_address}',D_email='{Tmp.D_email}' WHERE D_id={Tmp.D_id} ";
+                SQL = $"UPDATE T_Drivers SET D_name=N'{Tmp.D_name}',D_phone='{Tmp.D_phone}' ,D_address=N'{Tmp.D_address}',D_email=N'{Tmp.D_email}' WHERE D_id={Tmp.D_id} ";
 
             }
 

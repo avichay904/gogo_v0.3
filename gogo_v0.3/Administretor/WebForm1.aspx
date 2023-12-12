@@ -41,7 +41,7 @@
                 map,
                 panel: document.getElementById("panel"),
             });
-
+           
             directionsRenderer.addListener("directions_changed", () => {
                 const directions = directionsRenderer.getDirections();
 
@@ -56,6 +56,8 @@
                 directionsRenderer
             );
         }
+
+        
 
         function displayRoute(origin, destination, service, display) {
             service

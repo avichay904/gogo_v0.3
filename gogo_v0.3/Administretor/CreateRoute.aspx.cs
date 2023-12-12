@@ -87,7 +87,7 @@ namespace gogo_v0._3.Administretor
 
             using (var client = new WebClient())
             {
-                string url = $"https://maps.googleapis.com/maps/api/directions/json?origin={OriginUrl},+ישראל&destination={DestUrl},+ישראל&waypoints=optimize:true{WayPoints}&key=AIzaSyAdb8PCEpJNc-q-ojME4uQRdOEV-Kp2UkU&waypoiny";
+                string url = $"https://maps.googleapis.com/maps/api/directions/json?origin={OriginUrl},+ישראל&destination={DestUrl},+ישראל&waypoints=optimize:true|{WayPoints}&key=AIzaSyAdb8PCEpJNc-q-ojME4uQRdOEV-Kp2UkU&waypoiny";
                 var response = client.DownloadString(url);
                
 

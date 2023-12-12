@@ -161,7 +161,7 @@
     <Content Include="Administretor\Drivers.aspx" />
     <Content Include="Administretor\Home.aspx" />
     <Content Include="Administretor\index.js" />
-    <Content Include="Administretor\map.aspx" />
+    <Content Include="Administretor\Map.aspx" />
     <Content Include="Administretor\Marlogs.aspx" />
     <Content Include="Administretor\scripts\build-assets.js" />
     <Content Include="Administretor\scripts\build-pug.js" />
@@ -186,6 +186,8 @@
     <Content Include="Administretor\Style.css" />
     <Content Include="Administretor\UpdataShipment.aspx" />
     <Content Include="Administretor\WebForm1.aspx" />
+    <Content Include="Administretor\WebForm2.aspx" />
+    <Content Include="Administretor\WebForm3.aspx" />
     <Content Include="admin\css\font-awesome.css" />
     <Content Include="admin\css\font-awesome.min.css" />
     <Content Include="admin\css\simple-line-icons.css" />
@@ -552,12 +554,12 @@
     <Compile Include="Administretor\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Administretor\map.aspx.cs">
-      <DependentUpon>map.aspx</DependentUpon>
+    <Compile Include="Administretor\Map.aspx.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Administretor\map.aspx.designer.cs">
-      <DependentUpon>map.aspx</DependentUpon>
+    <Compile Include="Administretor\Map.aspx.designer.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
     </Compile>
     <Compile Include="Administretor\Marlogs.aspx.cs">
       <DependentUpon>Marlogs.aspx</DependentUpon>
@@ -586,6 +588,20 @@
     </Compile>
     <Compile Include="Administretor\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administretor\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administretor\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administretor\WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administretor\WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\admin.Master.cs">
       <DependentUpon>admin.Master</DependentUpon>

@@ -17,6 +17,8 @@ namespace gogo_v0._3.Administretor
 
 
 
+                Response.Write(e.ToString());
+
 
             }
 

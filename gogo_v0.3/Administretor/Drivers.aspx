@@ -42,8 +42,8 @@
                                         <td><%#Eval("D_phone") %></td>
                                         <td><%#Eval("D_address") %></td>
                                         <td><%#Eval("D_email") %></td>
-                                          <td><a href="AddDriver.aspx?Did=<%#Eval("D_id") %>&op=del" class="btn btn-outline-warning btn-lg "></a> 
-                                              <a href="AddDriver.aspx?Did=<%#Eval("D_id") %>&op=edit" class="btn btn-outline-warning btn-lg "></a> 
+                                          <td><a href="AddDriver.aspx?Did=<%#Eval("D_id") %>&op=del" class="btn btn-outline-dark btn-lg ">Delete</a> 
+                                              <a href="AddDriver.aspx?Did=<%#Eval("D_id") %>&op=edit" class="btn btn-outline-warning btn-lg ">Edit</a> 
                                           </td>
 
                                     </tr>

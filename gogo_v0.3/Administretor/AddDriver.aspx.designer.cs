@@ -51,15 +51,6 @@ namespace gogo_v0._3.Administretor
         protected global::System.Web.UI.HtmlControls.HtmlInputText Address;
 
         /// <summary>
-        /// add control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button add;
-
-        /// <summary>
         /// addDriver control.
         /// </summary>
         /// <remarks>

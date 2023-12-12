@@ -66,7 +66,22 @@ namespace gogo_v0._3.Administretor
 
         protected void add_Click(object sender, EventArgs e)
         {
+            string Did = Request["Did"] + "";
+            if (Did == "")
+                Did = "-1";
+            B_Driver Tmp = new B_Driver()
+            {
 
+                D_name = Name.Value + "",
+                D_address = Address.Value + "",
+                D_email = Email.Value + "",
+                D_phone = phone.Value + "",
+                D_id = int.Parse(Did)
+            };
+
+
+            Tmp.addDriver(Tmp);
+            Response.Redirect("drivers.aspx");
         }
     }
 }

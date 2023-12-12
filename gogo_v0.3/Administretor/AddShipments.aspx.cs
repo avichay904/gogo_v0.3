@@ -53,13 +53,13 @@ namespace gogo_v0._3.Administretor
             B_Shipment Tmp = new B_Shipment()
             {
                 S_id = -1,
-                S_city = route.Text + "",
+                S_city = locality.Text + "",
 
                 S_dataEnd = dataEnd.Value + ""  ,
                 S_Phone = phone.Value+"",
-                S_street = locality.Text+"",
+                S_street = route.Text+"",
                 S_msg = msg.Value + "",
-                S_numeH = street_number.Text + "0",      
+                S_numeH = street_number.Text,      
                 S_sumBox=int.Parse(numBox.Value),
                 C_id=int.Parse(Cname.SelectedValue),
                 D_id= int.Parse(Dname.SelectedValue),

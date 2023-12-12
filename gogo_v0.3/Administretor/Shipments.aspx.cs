@@ -15,7 +15,10 @@ namespace gogo_v0._3.Administretor
             if (!IsPostBack)
             {
                 rpt.DataSource = B_Shipment.GetAll();
+
                 rpt.DataBind();
+            
+                
             }
 
 
@@ -30,6 +33,8 @@ namespace gogo_v0._3.Administretor
 
         protected void rpt_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
+
+            
             if (e.Item.ItemType == ListItemType.Item)
             {
                 ((Literal)e.Item.FindControl("ltl_Driver")).Text = B_Driver.GetById(((B_Shipment)e.Item.DataItem).D_id).D_name;

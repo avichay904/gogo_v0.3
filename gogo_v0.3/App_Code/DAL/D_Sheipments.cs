@@ -62,7 +62,7 @@ namespace DAL
             else
             {
 
-                SQL = $"UPDATE T_Shipments SET C_id={Tmp.C_id},S_dataEnd='{Tmp.S_dataEnd}' ,D_id={Tmp.D_id},S_phone='{Tmp.S_Phone}',S_city='{Tmp.S_city}',S_street='{Tmp.S_street}',S_numeH='{Tmp.S_numeH}' ,S_sumBox={Tmp.S_sumBox},S_toDo={Tmp.S_toDo},S_picName='{Tmp.S_picName}',S_msg='{Tmp.S_msg}' WHERE S_id={Tmp.S_id} ";
+                SQL = $"UPDATE T_Shipments SET C_id={Tmp.C_id},S_dataEnd='{Tmp.S_dataEnd}' ,D_id={Tmp.D_id},S_phone='{Tmp.S_Phone}',S_city='N{Tmp.S_city}',S_street='N{Tmp.S_street}',S_numeH='{Tmp.S_numeH}' ,S_sumBox={Tmp.S_sumBox},S_toDo={Tmp.S_toDo},S_picName='{Tmp.S_picName}',S_msg='N{Tmp.S_msg}' WHERE S_id={Tmp.S_id} ";
 
             }
 
