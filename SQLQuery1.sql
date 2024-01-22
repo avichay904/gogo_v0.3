@@ -1,1 +1,0 @@
-﻿UPDATE T_Shipments SET C_id=8 where S_id=128
