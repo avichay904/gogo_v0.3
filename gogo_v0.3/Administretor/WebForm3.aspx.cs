@@ -11,7 +11,6 @@ namespace gogo_v0._3.Administretor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

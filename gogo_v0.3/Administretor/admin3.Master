@@ -1,7 +1,4 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin3.master.cs" Inherits="gogo_v0._3.Administretor.admin3" %>
-
-<!DOCTYPE html>
-<html  lang="en" runat="server">
     <head runat="server">
 
         <meta charset="utf-8" />
