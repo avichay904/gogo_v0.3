@@ -80,31 +80,41 @@ namespace gogo_v0._3.Administretor
 
             WayPoints = WayPoints.Substring(0, WayPoints.Length - 1);
 
+            Session["waypointOrder"] = WayPoints;
+            Session["destination"] = DestUrl +" ,ישראל";
+            Session["Origin"] = OriginUrl + " ,ישראל";
 
-           
             // מבצע בקשה לגוגל המקבל מקור יעד ונקודות עצירה
 
 
-            using (var client = new WebClient())
-            {
-                string url = $"https://maps.googleapis.com/maps/api/directions/json?origin={OriginUrl},+ישראל&destination={DestUrl},+ישראל&waypoints=optimize:true|{WayPoints}&key=AIzaSyAdb8PCEpJNc-q-ojME4uQRdOEV-Kp2UkU&waypoiny";
-                var response = client.DownloadString(url);
+            //using (var client = new WebClient())
+            //{
+            //    string url = $"https://maps.googleapis.com/maps/api/directions/json?origin={OriginUrl},+ישראל&destination={DestUrl},+ישראל&waypoints=optimize:true|{WayPoints}&key=AIzaSyAdb8PCEpJNc-q-ojME4uQRdOEV-Kp2UkU&waypoiny";
+            //    var response = client.DownloadString(url);
                
 
 
-                var parsedResponse = JObject.Parse(response);
-                string st = "";
-                if (parsedResponse["status"].ToString() == "OK")
-                {
-                    var waypointOrder = parsedResponse["routes"][0]["waypoint_order"].ToList();
-                    for(int i=0;i<waypointOrder.Count;i++)
-                    {
-                        st += waypointOrder[i]+",";
-                    }
 
-                    Session["waypointOrder"] = st;
 
-                }
+
+
+
+            //    var parsedResponse = JObject.Parse(response);
+            //    string st = "";
+            //    if (parsedResponse["status"].ToString() == "OK")
+            //    {
+            //        var waypointOrder = parsedResponse["routes"][0]["waypoint_order"].ToList();
+            //        for(int i=0;i<waypointOrder.Count;i++)
+            //        {
+            //            st += waypointOrder[i]+",";
+            //        }
+
+            //        Session["waypointOrder"] = st;
+                   
+
+
+
+            //    }
 
               
                
@@ -113,7 +123,7 @@ namespace gogo_v0._3.Administretor
 
                     
 
-            }
+            //}
             Response.Redirect("WebForm1.aspx");
 
         }

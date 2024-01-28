@@ -1,9 +1,14 @@
-﻿using System;
+﻿using BLL;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Security.Cryptography;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
 namespace gogo_v0._3.Administretor
 {
@@ -13,11 +18,14 @@ namespace gogo_v0._3.Administretor
         {
             if (!IsPostBack)
             {
-                ltaWayPonit.Text = Session["waypointOrder"]+"";
+                ltaWayPonit.Text = Session["waypointOrder"] + "";
+                Response.Write(e.ToString()); // log
 
 
-
-                Response.Write(e.ToString());
+                string Origin = Session["Origin"] + "";
+                string destination = Session["destination"] + "";
+                string waypointOrder = Session["waypointOrder"] + "";
+               
 
 
             }

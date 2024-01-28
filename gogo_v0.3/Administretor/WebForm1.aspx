@@ -33,7 +33,7 @@
         function initMap() {
             const map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 4,
-                center: { lat: -24.345, lng: 134.46 }, // Australia.
+                center: {  }, // Australia.
             });
             const directionsService = new google.maps.DirectionsService();
             const directionsRenderer = new google.maps.DirectionsRenderer({
@@ -50,8 +50,8 @@
                 }
             });
             displayRoute(
-                "Perth, WA",
-                "Sydney, NSW",
+                "אשדוד, ישראל",
+                "חיפה, ישראל",
                 directionsService,
                 directionsRenderer
             );
@@ -65,11 +65,14 @@
                     origin: origin,
                     destination: destination,
                     waypoints: [
-                        { location: "Adelaide, SA" },
-                        { location: "Broken Hill, NSW" },
+                        { location: "רמלה,ישראל" },
+                        { location: "רמלה,ישראל" },
+                        { location: "רמלה,ישראל" },
+                       
                     ],
                     travelMode: google.maps.TravelMode.DRIVING,
                     avoidTolls: true,
+                    optimizeWaypoints: true, // מאפשר סידור הקו על פי בעית הסוכן הנוסע
                 })
                 .then((result) => {
                     display.setDirections(result);
