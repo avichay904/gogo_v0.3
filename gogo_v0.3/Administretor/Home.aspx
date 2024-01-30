@@ -4,165 +4,150 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div class="container-fluid ">
-        <h1 class="mt-4"></h1>
-        <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item active"></li>
-        </ol>
-        <div class="row  p-5    ">
-            <div class=" col-3">
-                <div class="card bg-primary text-white mb-4">
-                    <div class="card-body">Shipments</div>
-                    <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="Shipments.aspx">View Details</a>
-                        <div class="small text-white">
-                            <svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg="">
-                                <path fill="currentColor" d="M246.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256 41.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg><!-- <i class="fas fa-angle-right"></i> Font Awesome fontawesome.com --></div>
+    <div class="container-fluid m-5">
+        <div class="container-md p-5">
+
+   <div class="row">
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                               מספר נהגים</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">  <%= Session["cnt_Driver"] %></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                מספר מרלוגים </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><%= Session["cnt_marlog"] %></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">מספר משלוחים פתוחים
+                                            </div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><%= Session["cnt_Shipment"] %></div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="progress progress-sm mr-2">
+                                                        <div class="progress-bar bg-info" role="progressbar" style="width: <%=Session["cnt_Shipment"]%>%" aria-valuenow="<%= Session["cnt_Shipment"] %>" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pending Requests Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                משלוחים סגורים</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><%= Session["lest_Id"] %></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
+
+
+           <div class="card mb-4 p-5 m-5">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    Shupments List
                 </div>
-            </div>
-            <div class=" col-3">
-                <div class="card bg-primary text-white mb-4">
-                    <div class="card-body">Driver</div>
-                    <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="Drivers.aspx">View Details</a>
-                        <div class="small text-white">
-                            <svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg="">
-                                <path fill="currentColor" d="M246.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256 41.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg><!-- <i class="fas fa-angle-right"></i> Font Awesome fontawesome.com --></div>
-                    </div>
+                <div class="card-deck">
+                    <table id="datatablesSimple">
+
+                            <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>City</th>
+                                <th>Street</th>
+                                <th>Data start </th>
+                              
+                                <th>Start end</th>
+                                <th>Phone</th>
+                                <th>Box</th>
+                                <th>edit</th>
+                                <th>Select</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <asp:Repeater ID="rpt" runat="server" OnItemDataBound="rpt_ItemDataBound">
+                         
+                                <ItemTemplate>
+
+                                    <tr>
+                                         <td><%#Eval("S_id") %></td>
+                                        <td><%#Eval("S_city") %></td>
+                                        <td><%#Eval("S_street") %></td>
+                                        <td><%#Eval("S_dataStart") %></td>
+                                        
+                                        <td><%#Eval("S_dataEnd") %></td>
+                                        <td><%#Eval("S_phone") %></td>
+                                         <td><%#Eval("S_sumBox") %></td>
+                                        <td><a href="AddShipments.aspx?Sid=<%#Eval("S_id") %>&op=del" class="btn btn-outline-warning btn-sm">delete</a> 
+                                        <a href="UpdataShipment.aspx?Sid=<%#Eval("S_id") %>&op=edit" class="btn btn-outline-warning btn-sm">Edit</a>
+                                        </td>
+                                        <td>    <input class="form-check-input" type="checkbox" name="Shpment" value='<%# Eval("S_id") %>' id="Checks" checked="checked" />
+                                        </td>
+                                       
+                                    </tr>
+
+                                </ItemTemplate>
+
+                            </asp:Repeater>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-            <div class=" col-3">
-                <div class="card bg-primary text-white mb-4">
-                    <div class="card-body">marlog</div>
-                    <div class="card-footer d-flex align-items-center justify-content-between">
-                        <a class="small text-white stretched-link" href="Marlogs.aspx">View Details</a>
-                        <div class="small text-white">
-                            <svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg="">
-                                <path fill="currentColor" d="M246.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256 41.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg><!-- <i class="fas fa-angle-right"></i> Font Awesome fontawesome.com --></div>
-                    </div>
-                </div>
-            </div>
+
 
         </div>
     </div>
-    
-             <div class="row">
-                 <div class="col">
-            <div class="card mb-4">
-                <div class="card-body">
-                    DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
-                    <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
+ 
 
-                </div>
-            </div>
-            <div class="card mb-4">
-                <div class="card-header">
-                    <i class="fas fa-table me-1"></i>
-                   Driver List
-                </div>
-                <div class="card-body">
-                    <table id="datatablesSimple">
-
-
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Phone</th>
-                                <th>Address </th>
-                                <th>Email</th>
-                                <th>Edit</th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                            <asp:Repeater ID="rpt" runat="server">
-                                <ItemTemplate>
-
-                                    <tr>
-                                        <td><%#Eval("D_name") %></td>
-                                        <td><%#Eval("D_phone") %></td>
-                                        <td><%#Eval("D_address") %></td>
-                                        <td><%#Eval("D_email") %></td>
-                                          <td><a href="AddDriver.aspx?Did=<%#Eval("D_id") %>&op=del" class="btn btn-outline-dark btn-lg ">Delete</a> 
-                                              <a href="AddDriver.aspx?Did=<%#Eval("D_id") %>&op=edit" class="btn btn-outline-warning btn-lg ">Edit</a> 
-                                          </td>
-
-                                    </tr>
-
-                                </ItemTemplate>
-
-                            </asp:Repeater>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-                     </div>
-
-
-
-
-                 <div class="col">
-
-                      <div class="card mb-4">
-                <div class="card-body">
-                    DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
-                    <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
-
-                </div>
-            </div>
-            <div class="card mb-4">
-                <div class="card-header">
-                    <i class="fas fa-table me-1"></i>
-                   Driver List
-                </div>
-                <div class="card-body">
-                    <table id="datatablesSimple">
-
-
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Phone</th>
-                                <th>Address </th>
-                                <th>Email</th>
-                                <th>Edit</th>
-
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                            <asp:Repeater ID="Repeater1" runat="server">
-                                <ItemTemplate>
-
-                                    <tr>
-                                        <td><%#Eval("C_name") %></td>
-                                        <td><%#Eval("C_phone") %></td>
-                                        <td><%#Eval("C_city") %></td>
-                                        <td><%#Eval("C_email") %></td>
-                                          <td>
-                                              <a href="Add Marlog.aspx?Sid=<%#Eval("C_id") %>&op=del" class="btn btn-outline-warning btn-lg ">delat</a>
-                                              <a href="Add Marlog.aspx?Sid=<%#Eval("C_id") %>&op=edit" class="btn btn-outline-warning btn-lg ">edit</a>
-
-                                          </td>
-
-                                    </tr>
-
-                                </ItemTemplate>
-
-                            </asp:Repeater>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        
-
-                 </div>
-
-
-                 <div class="col">
-
-                 </div>
-        </div>
 </asp:Content>

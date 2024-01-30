@@ -59,7 +59,7 @@ namespace gogo_v0._3.Administretor
                 S_Phone = phone.Value+"",
                 S_street = route.Text+"",
                 S_msg = msg.Value + "",
-                S_numeH = street_number.Text,      
+                S_numeH = street_number.Text+"",      
                 S_sumBox=int.Parse(numBox.Value),
                 C_id=int.Parse(Cname.SelectedValue),
                 D_id= int.Parse(Dname.SelectedValue),

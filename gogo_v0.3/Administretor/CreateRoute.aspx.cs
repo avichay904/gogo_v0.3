@@ -73,7 +73,7 @@ namespace gogo_v0._3.Administretor
 
             for(int i = 0; i < Lst.Count; i++)
             {
-                string address = Lst[i].S_city + " " + Lst[i].S_street + Lst[i].S_numeH + " " + ",+ישראל|";
+                string address = "{ location: \" "+Lst[i].S_city + "  " + Lst[i].S_street + Lst[i].S_numeH + " " + ",ישראל \" "+  " },";
 
                 WayPoints += address;
             }

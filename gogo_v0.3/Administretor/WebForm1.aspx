@@ -50,24 +50,23 @@
                 }
             });
             displayRoute(
-                "אשדוד, ישראל",
-                "חיפה, ישראל",
+                "<%= Session["Origin"] %>",
+                "<%= Session["destination"] %>",
                 directionsService,
                 directionsRenderer
             );
         }
 
         
-
+        waypointOrder
         function displayRoute(origin, destination, service, display) {
             service
                 .route({
                     origin: origin,
                     destination: destination,
                     waypoints: [
-                        { location: "רמלה,ישראל" },
-                        { location: "רמלה,ישראל" },
-                        { location: "רמלה,ישראל" },
+                         <%= Session["waypointOrder"] %>
+                       
                        
                     ],
                     travelMode: google.maps.TravelMode.DRIVING,

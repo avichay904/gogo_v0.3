@@ -16,9 +16,9 @@ namespace DAL
             List<B_Shipment> list = new List<B_Shipment>();
             string Sql = "SELECT * FROM T_Shipments";
             DBcontext Db = new DBcontext();
-            DataTable Dt= new DataTable();
-            Dt=Db.Excute(Sql);
-            for(int i = 0; i < Dt.Rows.Count; i++)
+            DataTable Dt = new DataTable();
+            Dt = Db.Excute(Sql);
+            for (int i = 0; i < Dt.Rows.Count; i++)
             {
                 B_Shipment tmp = new B_Shipment()
                 {
@@ -39,8 +39,8 @@ namespace DAL
 
                 };
                 list.Add(tmp);
-                
-                
+
+
             }
 
             Db.Close();
@@ -50,25 +50,25 @@ namespace DAL
         }
 
 
-        public static void AddUpdate (B_Shipment Tmp)
+        public static void AddUpdate(B_Shipment Tmp)
         {
 
             string SQL = "";
-                if (Tmp.S_id == -1)
+            if (Tmp.S_id == -1)
             {
                 SQL = $"INSERT INTO T_Shipments (C_id,S_dataStart,S_dataEnd,D_id,S_phone,S_city,S_street,S_numeH,S_sumBox,S_toDo,S_picName,S_dataDo,S_msg) Values ({Tmp.C_id},GETDATE(),'{Tmp.S_dataEnd}' ,{Tmp.D_id} ,'{Tmp.S_Phone}' ,N'{Tmp.S_city}', N'{Tmp.S_street}' ,'{Tmp.S_numeH}',{Tmp.S_sumBox},{Tmp.S_toDo},N'{Tmp.S_picName}','{Tmp.S_dataDo}',N'{Tmp.S_msg}' ) ";
-                  
+
             }
             else
             {
 
-                SQL = $"UPDATE T_Shipments SET C_id={Tmp.C_id},S_dataEnd='{Tmp.S_dataEnd}' ,D_id={Tmp.D_id},S_phone='{Tmp.S_Phone}',S_city='N{Tmp.S_city}',S_street='N{Tmp.S_street}',S_numeH='{Tmp.S_numeH}' ,S_sumBox={Tmp.S_sumBox},S_toDo={Tmp.S_toDo},S_picName='{Tmp.S_picName}',S_msg='N{Tmp.S_msg}' WHERE S_id={Tmp.S_id} ";
+                SQL = $"UPDATE T_Shipments SET C_id={Tmp.C_id},S_dataEnd='{Tmp.S_dataEnd}' ,D_id={Tmp.D_id},S_phone='{Tmp.S_Phone}',S_city='{Tmp.S_city}',S_street='{Tmp.S_street}',S_numeH='{Tmp.S_numeH}' ,S_sumBox={Tmp.S_sumBox},S_toDo={Tmp.S_toDo},S_picName='{Tmp.S_picName}',S_msg='{Tmp.S_msg}' WHERE S_id={Tmp.S_id} ";
 
             }
 
 
             DBcontext Db = new DBcontext();
-              Db.ExcuteNonQury(SQL);
+            Db.ExcuteNonQury(SQL);
 
             Db.Close();
 
@@ -76,9 +76,9 @@ namespace DAL
         }
 
 
-       
 
-        public static B_Shipment GetById (B_Shipment Tmp)
+
+        public static B_Shipment GetById(B_Shipment Tmp)
         {
             string Sql = $"SELECT * FROM T_Shipments WHERE S_id={Tmp.S_id}";
 
@@ -109,7 +109,7 @@ namespace DAL
             return Tmp;
 
         }
-        public static List<B_Shipment> GetById(string Sid) 
+        public static List<B_Shipment> GetById(string Sid)
         {
             List<B_Shipment> list = new List<B_Shipment>();
             string Sql = $"SELECT * FROM T_Shipments WHERE S_id IN ({Sid})";
