@@ -39,4 +39,7 @@ For any issues or inquiries, contact avichay904@gmail.com.
 
 Happy coding!
 
+[Link to the video](https://www.youtube.com/watch?v=gkEFW6rWBrY)
+
+
 --- GOGO
