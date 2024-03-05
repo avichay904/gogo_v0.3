@@ -64,7 +64,7 @@ namespace gogo_v0._3.Administretor
         
 
 
-            string AppKey = "AIzaSyA3rNYnv8Z04fskn_1twWn8qO5Jqs4WBSY";
+            string AppKey = "";
             string BaseUrl = "https://maps.googleapis.com/maps/api/directions/json?";
             string WayPoints = "";
             string OriginUrl = Cname.SelectedValue;
