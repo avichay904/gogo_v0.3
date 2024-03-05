@@ -111,7 +111,7 @@
 
 
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdb8PCEpJNc-q-ojME4uQRdOEV-Kp2UkU&callback=initMap&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly"
       defer
     ></script>
 
