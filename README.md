@@ -12,8 +12,7 @@ This project tackles logistical challenges faced by courier agents, offering a c
      - `gogo_v0.3/Administrator/WebForm1.aspx`
      - `gogo_v0.3/Administrator/AddShipments.aspx`
      - `gogo_v0.3/Administrator/CreateRoute.aspx.cs`
-     - `gogo_v0.3/testGoogle.aspx.cs`
-     - `gogo_v0.3/Administrator/map.aspx`
+
 
 2. **Project Components:**
    - SQL is used for robust data management.
